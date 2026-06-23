@@ -169,16 +169,7 @@ const Hero = ({ handleLogin }: { handleLogin: () => void }) => {
       <div className="relative mx-auto max-w-screen-xl px-6 pb-6 pt-12 text-center md:pb-8 md:pt-16">
         <div className="mx-auto max-w-3xl">
           <BlurFade delay={0.3} className="pointer-events-none select-none">
-            <div
-              className="inline-flex items-center rounded-full border border-primary/20 px-4 py-1.5 shadow-lg backdrop-blur-sm"
-              style={{ background: '#04d344' }}
-            >
-              <span className="text-sm font-medium text-white">
-                ✨ Powered by Believe Revenue Share
-              </span>
-            </div>
-
-            <h1 className="mt-6 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
               The{' '}
               <AnimatedShinyText className="inline">
                 <span>AI Assistant</span>
