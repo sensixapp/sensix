@@ -184,13 +184,22 @@ const Hero = ({ handleLogin }: { handleLogin: () => void }) => {
           </BlurFade>
 
           <BlurFade delay={0.4}>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <RainbowButton
                 onClick={handleLogin}
                 className="h-12 min-w-[180px] text-base transition-all duration-300 hover:scale-105"
               >
                 Getting Started
               </RainbowButton>
+              <Link href="/docs">
+                <Button
+                  variant="outline"
+                  className="h-12 min-w-[180px] gap-2 text-base transition-all duration-300 hover:scale-105"
+                >
+                  <BookOpenIcon className="h-4 w-4" />
+                  Read the Docs
+                </Button>
+              </Link>
             </div>
           </BlurFade>
         </div>

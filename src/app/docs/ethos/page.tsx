@@ -1,52 +1,140 @@
-import Link from "next/link";
+import Link from 'next/link';
+
+import {
+  CodeIcon,
+  GitForkIcon,
+  HeartHandshakeIcon,
+  LockKeyholeIcon,
+  RefreshCwIcon,
+  SproutIcon,
+  StarIcon,
+  UsersIcon,
+} from 'lucide-react';
+
+import {
+  Callout,
+  CheckItem,
+  CheckList,
+  DocFooter,
+  DocHeader,
+  DocPage,
+  FeatureCard,
+  FeatureGrid,
+  Section,
+} from '../_components/doc-ui';
 
 export default function OpenSourceEthosPage() {
   return (
-    <div className="prose prose-neutral mx-auto px-4 py-8 dark:prose-invert">
-      <h1>Open Source Ethos</h1>
-      <p>
-        <strong>Sensix</strong> is a community-led fork of the original NeurApp project, brought back to life with a clear and transparent vision: to make Solana-based blockchain tools more accessible, intelligent, and free from speculative influence.
-      </p>
+    <DocPage>
+      <DocHeader
+        eyebrow="Open-Source Ethos"
+        title="Built in the open, for the community"
+        lead="Sensix is a community-led fork of the original NeurApp project, brought back to life with a clear and transparent vision: to make Solana tooling more accessible, intelligent and free from speculative influence."
+      />
 
-      <h2>Why Sensix Exists</h2>
-      <p>
-        NeurApp was a promising open-source project that combined AI with blockchain, offering natural language interfaces for DeFi, NFTs, and more on Solana. Unfortunately, after a successful token launch, the project was abandoned by its original developers—leaving behind a powerful but unused codebase.
-      </p>
-      <p>
-        Sensix is our response to that abandonment. We revived the project not for profit, but to restore its usefulness to the Solana community. No token relaunch. No roadmap hype. Just clean, working code and long-term usability.
-      </p>
+      <Section title="Why Sensix Exists">
+        <p className="mb-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          NeurApp was a promising open-source project that combined AI with
+          blockchain, offering natural-language interfaces for DeFi, NFTs and
+          more on Solana. Unfortunately, after a successful token launch, the
+          project was abandoned by its original developers — leaving behind a
+          powerful but unused codebase.
+        </p>
+        <Callout icon={SproutIcon} variant="success" title="Our response to abandonment">
+          We revived the project not for profit, but to restore its usefulness
+          to the Solana community. No token relaunch hype. No roadmap theatrics.
+          Just clean, working code and long-term usability.
+        </Callout>
+      </Section>
 
-      <h2>Our Commitments</h2>
-      <ul>
-        <li><strong>100% Open Source:</strong> Code, roadmap, and decisions are public.</li>
-        <li><strong>No Team Tokens:</strong> Team is keeping 0% of the tokens. The project will be self-sustaining thanks to Believe App trading fees.</li>
-        <li><strong>Respect for Users:</strong> Privacy, transparency, and clear UX are core to our development.</li>
-        <li><strong>Respect for Developers:</strong> Contributions are welcome and credited. No closed doors.</li>
-        <li><strong>Respect for the Original Vision:</strong> We give credit where credit is due and build responsibly on top of NeurApp’s ideas.</li>
-      </ul>
+      <Section
+        title="Our Commitments"
+        description="The promises that define how we build and operate."
+      >
+        <CheckList>
+          <CheckItem>
+            <strong className="text-foreground">100% Open Source:</strong> code,
+            roadmap and decisions are public.
+          </CheckItem>
+          <CheckItem>
+            <strong className="text-foreground">No Team Tokens:</strong> the team
+            keeps 0% of the supply. The project stays self-sustaining through
+            small platform and trading fees — not insider allocations.
+          </CheckItem>
+          <CheckItem>
+            <strong className="text-foreground">Respect for Users:</strong>{' '}
+            privacy, transparency and clear UX are core to our development.
+          </CheckItem>
+          <CheckItem>
+            <strong className="text-foreground">Respect for Developers:</strong>{' '}
+            contributions are welcome and credited. No closed doors.
+          </CheckItem>
+          <CheckItem>
+            <strong className="text-foreground">
+              Respect for the Original Vision:
+            </strong>{' '}
+            we give credit where it&apos;s due and build responsibly on top of
+            NeurApp&apos;s ideas.
+          </CheckItem>
+        </CheckList>
+      </Section>
 
-      <h2>How Sensix Differs</h2>
-      <ul>
-        <li><strong>Brand:</strong> Rebranded from NeurApp to Sensix to reflect a fresh start</li>
-        <li><strong>Maintenance:</strong> Actively maintained with regular updates</li>
-        <li><strong>Focus:</strong> Fully committed to open AI tools for blockchain, without financial speculation</li>
-        <li><strong>Community:</strong> Built in public with contributions welcome</li>
-      </ul>
+      <Section
+        title="How Sensix Differs"
+        description="A fresh start, with a clear separation from the past."
+      >
+        <FeatureGrid>
+          <FeatureCard icon={RefreshCwIcon} title="Fresh Brand">
+            Rebranded from NeurApp to Sensix to reflect a clean, independent
+            start.
+          </FeatureCard>
+          <FeatureCard icon={CodeIcon} title="Actively Maintained">
+            Regularly updated, with bugs fixed and dependencies kept current.
+          </FeatureCard>
+          <FeatureCard icon={LockKeyholeIcon} title="No Speculation">
+            Fully committed to open AI tools for blockchain, without financial
+            speculation.
+          </FeatureCard>
+          <FeatureCard icon={UsersIcon} title="Built in Public">
+            Developed openly, with community contributions genuinely welcome.
+          </FeatureCard>
+        </FeatureGrid>
+      </Section>
 
-      <h2>Want to Help?</h2>
-      <p>
-        We’re looking for open-source contributors, testers, feedback, and ideas.
-        You can star, fork, or contribute directly via our GitHub:
-      </p>
-      <p>
-        <Link href="https://github.com/sensixapp/sensix" target="_blank" rel="noopener noreferrer">
-        https://github.com/sensixapp/sensix
-        </Link>
-      </p>
+      <Section
+        title="Want to Help?"
+        description="We're looking for open-source contributors, testers, feedback and ideas."
+      >
+        <div className="flex flex-wrap gap-3">
+          <Link
+            href="https://github.com/sensixapp/sensix"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-xl bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition-opacity hover:opacity-90"
+          >
+            <StarIcon className="h-4 w-4" />
+            Star on GitHub
+          </Link>
+          <Link
+            href="https://github.com/sensixapp/sensix/fork"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-xl border border-border px-5 py-2.5 text-sm font-semibold text-foreground transition-colors hover:bg-accent"
+          >
+            <GitForkIcon className="h-4 w-4" />
+            Fork & Contribute
+          </Link>
+        </div>
+        <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
+          <HeartHandshakeIcon className="h-4 w-4 text-emerald-500" />
+          Every contribution is credited.
+        </div>
+      </Section>
 
-      <footer className="mt-8 text-sm text-muted-foreground">
-        Sensix is not affiliated with the original NeurApp team. This is an independent, community-driven continuation.
-      </footer>
-    </div>
+      <DocFooter>
+        Sensix is not affiliated with the original NeurApp team. This is an
+        independent, community-driven continuation.
+      </DocFooter>
+    </DocPage>
   );
 }
