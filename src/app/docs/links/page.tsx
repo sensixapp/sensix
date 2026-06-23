@@ -3,8 +3,10 @@ import Link from 'next/link';
 import { GitHubLogoIcon, TwitterLogoIcon } from '@radix-ui/react-icons';
 import {
   ArrowUpRightIcon,
+  CandlestickChartIcon,
   GlobeIcon,
   LineChartIcon,
+  RocketIcon,
   TrendingUpIcon,
   type LucideIcon,
 } from 'lucide-react';
@@ -24,6 +26,18 @@ const links: LinkEntry[] = [
     description: 'Launch the Sensix app',
     href: 'https://sensix.app',
     icon: GlobeIcon,
+  },
+  {
+    name: 'Pump.fun',
+    description: 'Buy $SENSIX on the fair launch',
+    href: 'https://pump.fun',
+    icon: RocketIcon,
+  },
+  {
+    name: 'DexScreener',
+    description: 'Live $SENSIX chart and market data',
+    href: 'https://dexscreener.com',
+    icon: CandlestickChartIcon,
   },
   {
     name: 'Twitter / X',

@@ -1,11 +1,16 @@
+import Link from 'next/link';
+
 import {
   BadgeCheckIcon,
   CoinsIcon,
+  FlameIcon,
   GiftIcon,
   HandCoinsIcon,
   LockKeyholeIcon,
+  RocketIcon,
   ScaleIcon,
   SparklesIcon,
+  TrendingUpIcon,
   UsersIcon,
 } from 'lucide-react';
 
@@ -48,29 +53,70 @@ export default function TokenomicsPage() {
           <Stat value="100%" label="To the community" />
           <Stat value="0" label="Presale / private rounds" />
         </StatGrid>
-        <Callout icon={HandCoinsIcon} variant="success" title="Revenue model">
-          Sensix earns from real platform usage and trading fees — never from
-          token speculation. The team&apos;s incentives stay aligned with the
-          product&apos;s long-term success.
+        <Callout icon={RocketIcon} variant="success" title="Fair launch on Pump.fun">
+          $SENSIX launches on{' '}
+          <Link
+            href="https://pump.fun"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-emerald-600 underline-offset-4 hover:underline dark:text-emerald-400"
+          >
+            Pump.fun
+          </Link>{' '}
+          — a fully public, bonding-curve launch with no presale and no insider
+          allocation. Everyone buys on the same curve, at the same time, on
+          equal terms.
         </Callout>
       </Section>
 
       <Section
-        title="Utility"
-        description="What holding and using $SENSIX unlocks."
+        title="Token Utility"
+        description="$SENSIX isn't a meme with no purpose — it's the key to the entire platform. Every new feature, user and integration drives more demand for the token."
       >
-        <FeatureGrid>
-          <FeatureCard icon={SparklesIcon} title="Advanced Features">
-            Unlock access to advanced and early-release capabilities.
+        <Callout icon={TrendingUpIcon} variant="success" title="Utility that compounds">
+          The more Sensix grows, the more $SENSIX does. Holding the token isn&apos;t
+          a bet on hype — it&apos;s a stake in a product people actually use every
+          day, with real on-chain volume behind it.
+        </Callout>
+        <div className="mt-6">
+          <FeatureGrid>
+            <FeatureCard icon={SparklesIcon} title="Unlock the Full Agent">
+              Token holders get access to advanced and early-release
+              capabilities before anyone else — the most powerful version of
+              Sensix is gated behind $SENSIX.
+            </FeatureCard>
+            <FeatureCard icon={BadgeCheckIcon} title="Priority Access">
+              Skip the line for premium agents, new tools and experimental
+              features the moment they ship.
+            </FeatureCard>
+            <FeatureCard icon={GiftIcon} title="Rewards for Real Usage">
+              Active users are rewarded. The people who use the platform are the
+              ones who benefit from it — not passive speculators.
+            </FeatureCard>
+            <FeatureCard icon={CoinsIcon} title="Lower Fees, More Value">
+              Holders enjoy fee discounts and in-app benefits, making every swap
+              and action cheaper the more you&apos;re invested.
+            </FeatureCard>
+          </FeatureGrid>
+        </div>
+      </Section>
+
+      <Section
+        title="Why $SENSIX Accrues Value"
+        description="A flywheel where product usage and token demand reinforce each other."
+      >
+        <FeatureGrid cols={3}>
+          <FeatureCard icon={HandCoinsIcon} title="Real Revenue">
+            The platform earns from genuine trading and usage fees — value
+            flowing through Sensix is real, on-chain and verifiable.
           </FeatureCard>
-          <FeatureCard icon={BadgeCheckIcon} title="Priority Access">
-            Priority access to premium agents and tools as they ship.
+          <FeatureCard icon={UsersIcon} title="Growing Demand">
+            Every new user who wants the full experience needs $SENSIX,
+            tightening demand against a fixed, community-owned supply.
           </FeatureCard>
-          <FeatureCard icon={GiftIcon} title="Usage Rewards">
-            Usage-based rewards and optional governance participation.
-          </FeatureCard>
-          <FeatureCard icon={CoinsIcon} title="Fee Benefits">
-            Fee discounts and in-app benefits for active users.
+          <FeatureCard icon={FlameIcon} title="No Dilution">
+            With 0% team allocation and no presale unlocks, there&apos;s no
+            insider supply waiting to hit the market and dump on you.
           </FeatureCard>
         </FeatureGrid>
       </Section>
@@ -85,8 +131,9 @@ export default function TokenomicsPage() {
             the community.
           </CheckItem>
           <CheckItem>
-            Fair, community-first distribution at launch — open to everyone on
-            equal terms.
+            Fair launch on{' '}
+            <strong className="text-foreground">Pump.fun</strong> via an open
+            bonding curve — everyone enters on the same terms.
           </CheckItem>
           <CheckItem>No presale, no private rounds, no VCs.</CheckItem>
           <CheckItem>Transparent and fully on-chain allocation.</CheckItem>
@@ -112,8 +159,25 @@ export default function TokenomicsPage() {
 
       <Section title="Contract & Details">
         <Callout variant="info" title="Deployed on Solana">
-          The $SENSIX token lives on the Solana blockchain. Contract details
-          will be published at launch and listed on the{' '}
+          $SENSIX launches on{' '}
+          <Link
+            href="https://pump.fun"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-emerald-600 underline-offset-4 hover:underline dark:text-emerald-400"
+          >
+            Pump.fun
+          </Link>{' '}
+          and trades on the open market right away. Track the live chart on{' '}
+          <Link
+            href="https://dexscreener.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-emerald-600 underline-offset-4 hover:underline dark:text-emerald-400"
+          >
+            DexScreener
+          </Link>
+          . The official contract address will be published at launch and on the{' '}
           <span className="font-semibold text-foreground">Links</span> page.
         </Callout>
       </Section>
